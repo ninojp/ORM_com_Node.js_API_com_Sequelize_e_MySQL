@@ -17,3 +17,13 @@ Criar um novo banco de dados e conectá-lo à aplicação.
 
 
 ## Aula 02 - Modelos, Migrações e Seeds
+Comando usado para cria nossa primeira tabela(Pessoas) através do Sequilize(cli)
+> npx sequelize-cli model:create --name Pessoas --attributes nome:string,ativo:boolean,email:string,role:string
+
+Esta aula foi usado bastantes comandos no terminal, então não tem como descrever muita coisa o ideal é assistir as aulas novamente se necessário.
+
+## Aula 02 - Conclusão - Nesta aula, aprendemos:
+Criar modelos e arquivos de migração via terminal
+O que são e para que servem migrações com ORMs
+Executar migrações para criação de tabelas no banco
+Popular tabelas automaticamente através de arquivos seed
