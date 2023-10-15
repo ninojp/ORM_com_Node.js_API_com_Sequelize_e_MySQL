@@ -1,0 +1,1 @@
+Este curso não tem a ALURI(IA), e o conteúdo das primeira aulas referece a assuntos, na sua maioria, já abordados em outros cursos e explicações sobre as compatibilidas do material do curso suas atualizações(SQL, Sequelize).
