@@ -46,3 +46,9 @@ A chamar um método do controlador Pessoas através da rota com o verbo HTTP GET
 
 
 ## Aula 04 - CRUD com Sequelize
+## Aula 04 - Conclusão - Nesta aula, aprendemos a:
+Utilizar outros métodos do Sequelize para as operações de CRUD
+Enviar dados através de parâmetros de requisição HTTP
+Enviar dados através do corpo da requisição HTTP
+Criar rotas para cada operação
+Associar as rotas a cada método do controlador Pessoas
