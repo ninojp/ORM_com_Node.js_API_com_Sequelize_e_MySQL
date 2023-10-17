@@ -27,3 +27,22 @@ Criar modelos e arquivos de migração via terminal
 O que são e para que servem migrações com ORMs
 Executar migrações para criação de tabelas no banco
 Popular tabelas automaticamente através de arquivos seed
+
+
+
+## Aula 03 - Controladores e Rotas
+Basicamente este cursa esta desenvolvendo o mesmo que foi feito no curso anterior com MongoDB, só que agora usando o DB relacional SQL, como ão tem a aluri(IA) para resumir eu vou prosseguir e se for necessário eu volto e assisto as aulas novamente.
+
+## Aula 03 - Conclusão - Nesta aula, aprendemos:
+Como funciona o modelo MVC
+O que é e para que serve a camada de controle
+A criar um controlador
+Como usar métodos do Sequelize para consultar o banco
+A separar a responsabilidade das rotas para termos uma aplicação organizada
+Como criar uma rota para o modelo Pessoas
+A chamar um método do controlador Pessoas através da rota com o verbo HTTP GET
+
+
+
+
+## Aula 04 - CRUD com Sequelize
