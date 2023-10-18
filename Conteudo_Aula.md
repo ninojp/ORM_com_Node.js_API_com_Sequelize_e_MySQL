@@ -52,3 +52,47 @@ Enviar dados através de parâmetros de requisição HTTP
 Enviar dados através do corpo da requisição HTTP
 Criar rotas para cada operação
 Associar as rotas a cada método do controlador Pessoas
+
+
+
+## Aula 05 - Relações e Associações
+> O comando para criar os modelos dos arquivos de migração é: **npx sequelize-cli model:create**  
+> O comando para gerar a tabela no banco é: **npx sequelize-cli db:migrate**
+
+## Aula 05 - Modelos e Migrações - Video 1
+Criando os modelos e os arquivos de migrações para essas outras três tabelas
+ - npx sequelize-cli model:create –name Niveis –attributes descr_nivel:string
+ - npx sequelize-cli model:create –name Turmas –attributes data_inicio:dateonly
+ - npx sequelize-cli model:create –name Matriculas –attributes status:string
+
+> Para incluir um novo atributo no modelo existente: nome_atributo: DataTypes.STRING  
+É necessário rodar novamente o comando de migração para fazer a alteração no banco.  
+Utilizamos o comando de migração no ORM para fazer alterações rastreáveis no banco. As migrações ficam indexadas em sequelizeMeta e podem ser revertidas, mas não é preciso desfazer a migração anterior para fazer uma nova alteração no banco, como adicionar uma coluna. É só rodar um novo comando de migração para adicionar as alterações.
+
+
+## Aula 05 - Fazendo associações - Video 2
+Então as relações que temos na nossa tabela são relações de um para vários, de one to many. Como fazemos para usar os métodos do Sequelize para dizer isso no nosso código? O Sequelize diz também, está em inglês, mas vamos juntos, que has many, “tem muitas”, uma tradução bem livre do nome desse método, essa associação significa que uma relação de um para vários existe entre as tabelas A e B.  
+Então, entre as tabelas A e B há vários, podemos usar o método hasMany. Ele diz também que a chave estrangeira, a FK, tem que ser definida na tabela, no modelo B, que é o modelo que está sendo passado por parâmetro do método. Então, vamos copiar A.hasMany(B) e passar para o nosso código, e ver como traduzimos esse exemplo.
+> Exemplo:  
+Turmas.hasMany(models.Matriculas, {foreignKey: 'turma_id'});
+
+
+## Aula 05 - Referenciando Tabelas - Video 3
+Se olharmos a documentação do Sequelize, ela traz que as associações são feitas. Para criar uma relação de um para vários, eu tenho que usar o método hasMany, “tem vários”, e “pertence a”, usar os dois juntos. Só usamos o hasMany, vamos agora inserir o “pertence a”. Só que vamos inserir o “pertence a” do outro lado da relação.  
+Eu vou copiar um exemplo: Bar.belongsTo(Foo), e vamos adicionar o método belongsTo do outro lado das relações. Então vou adicionar em Matrículas para Pessoas, Matrículas para Turma, Turma para Pessoas e Turma para Nível.
+> Exemplo:  
+Matriculas.belongsTo(models.Turmas, {foreignKey: 'turma_id'});
+
+Agora, podemos rodar as migrações e ver se o Sequelize conseguiu conectar no banco e criar as tabelas. Então npx sequelize-cli db:migrate é o comando.
+> Exemplo:
+npx sequelize-cli db:migrate
+
+
+## Aula 05 - Populando Tabelas - Video 4
+Já sabemos como popular tabelas utilizando, utilizando os arquivos de seed. sabemos qual é o comando porque usamos para fazer o seed de pessoas. 
+> Exemplo: 
+npx sequelize-cli seed:generate --name demo-nivel
+
+hora que rodar o seeds. Então, faremos isso agora e quando criarmos os seeds, vamos ao banco e vemos se está tudo certo, vemos se foi tudo criado do jeito que passamos para o Sequelize.
+> Exemplo:
+npx sequelize-cli db:seed:all
