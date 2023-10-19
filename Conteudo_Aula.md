@@ -96,3 +96,17 @@ npx sequelize-cli seed:generate --name demo-nivel
 hora que rodar o seeds. Então, faremos isso agora e quando criarmos os seeds, vamos ao banco e vemos se está tudo certo, vemos se foi tudo criado do jeito que passamos para o Sequelize.
 > Exemplo:
 npx sequelize-cli db:seed:all
+
+
+## Aula 05 - Conclusão - Nesta aula, aprendemos a:
+Interpretar o diagrama de banco
+Identificar os tipos de relação pedidos no projeto
+Associar tabelas através de métodos do Sequelize
+Referenciar tabelas associadas
+Migrar tabelas associadas
+Popular tabelas associadas
+
+
+
+## Aula 06 - Controladores
+## Aula 06 - 
