@@ -97,7 +97,6 @@ hora que rodar o seeds. Então, faremos isso agora e quando criarmos os seeds, v
 > Exemplo:
 npx sequelize-cli db:seed:all
 
-
 ## Aula 05 - Conclusão - Nesta aula, aprendemos a:
 Interpretar o diagrama de banco
 Identificar os tipos de relação pedidos no projeto
@@ -109,4 +108,9 @@ Popular tabelas associadas
 
 
 ## Aula 06 - Controladores
-## Aula 06 - 
+## Aula 06 - Nesta aula, aprendemos a:
+Adicionar novos controladores;
+Trabalhar com mais de um modelo no mesmo controlador;
+Enviar dados via parâmetros e corpo das requisições;
+Utilizar estes dados para encontrar informações no banco;
+Gerar estruturas de dados do tipo JSON com informações úteis ao usuário.
